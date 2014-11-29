@@ -6,14 +6,21 @@
 
 
     <!--import styles-->
-    
+    <!--bootstrap-->
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap-theme.css"/>
+
+    <!--app css-->
     <link rel="stylesheet" href="../styles/app.css"/>
+
 
     <!--import js-->
 
     <script src="../libs/jquery-2.1.1.js"></script>
+    <!--angularja-->
     <script src="../libs/angularjs/angular.js"></script>
-
+    <!--bootstrap-->
+    <script src="../libs/bootstrap/js/bootstrap.js"?></script>
     <script src="../js/app.js"></script>
     <script src="../js/controllers/homeController.js"></script>
 
@@ -22,7 +29,14 @@
 
 <body ng-app="zovApp" ng-controller="HomeController">
 
-    <h1 class="hello">{{greeting}}</h1>
+<nav class="navbar navbar-inverse" role="navigation">
+    <button ng-click="showGreetingAlert()" type="button" class="btn btn-default navbar-btn greetingButton">Show greeting</button>
+</nav>
+
+<h3>
+    <span class="label label-default">{{greeting}}</span>
+</h3>
+
 
 </body>
 </html>
