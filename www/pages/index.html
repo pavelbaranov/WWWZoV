@@ -12,7 +12,8 @@
 
     <!--app css-->
     <link rel="stylesheet" href="../styles/app.css"/>
-
+    <!--jcarousel-->
+    <link rel="stylesheet" href="../libs/jcarousel/jcarousel.css"/>
 
     <!--import js-->
 
@@ -24,6 +25,16 @@
     <script src="../js/app.js"></script>
     <script src="../js/controllers/homeController.js"></script>
 
+    <script>
+
+
+
+    </script>
+
+    <!--jcarousel-->
+    <script src="../libs/jcarousel/jquery.jcarousel.js"></script>
+    <script src="../libs/jcarousel/jcarousel.responsive.js"></script>
+
 
 </head>
 
@@ -33,10 +44,20 @@
     <button ng-click="showGreetingAlert()" type="button" class="btn btn-default navbar-btn greetingButton">Show greeting</button>
 </nav>
 
-<h3>
-    <span class="label label-default">{{greeting}}</span>
-</h3>
+    <div class="jcarousel-wrapper">
+        <div class="jcarousel">
+            <ul>
+                <li ng-repeat="imgItem in carouselImages">
+                    <img ng-src="{{imgItem}}"/>
+                </li>
+            </ul>
+        </div>
+        <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+        <a href="#" class="jcarousel-control-next">&rsaquo;</a>
 
+        <p class="jcarousel-pagination"></p>
+
+    </div>
 
 </body>
 </html>
